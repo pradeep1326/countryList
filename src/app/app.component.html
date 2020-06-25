@@ -1,0 +1,15 @@
+<div class="container">
+    <br/><br/>
+    <div class="row">
+    <div class="col">
+        <app-list label="Region" [list]="regions" (itemChange)='regionChange($event)'></app-list>
+        <div *ngIf="countries.length>0" >
+            <app-list  label="Country" [list]="countries"  (itemChange)='countryChange($event)'></app-list>
+            <button class="btn btn-primary load " (click)="loadDetails()" >Load</button>
+        </div>
+    </div>
+    </div>
+    <div class="col" >
+        <app-country></app-country>
+    </div>
+</div>

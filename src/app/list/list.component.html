@@ -1,0 +1,11 @@
+<div class="container">
+    
+        <div class=" row form-group list-main">
+            <label class="col-md-1" for="name">{{label}}:</label>
+            <select class="form-control col-md-4" (change)="changeItem($event)">
+                <option [value]="" >Select {{label}}</option>
+                <option *ngFor="let item of list;let i = index" [value]="item">{{item}}</option>
+            </select>
+        </div>
+
+</div>

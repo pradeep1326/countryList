@@ -1,0 +1,28 @@
+<div class="container">
+<div class="row"> 
+<table class="country-table table table-bordered" *ngIf="countryDetail.name">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Capital</th>
+        <th>Population</th>
+        <th>Currencies</th>
+        <th>Flag</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{countryDetail.name}}</td>
+        <td>{{countryDetail.capital}}</td>
+        <td>{{countryDetail.population}}</td>
+        <td>
+          <ol>
+           <li *ngFor="let currency of countryDetail.currencies">{{currency.name}}</li> 
+          </ol>
+        </td>
+        <td ><img class="flag" [src]="countryDetail.flag"/></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
